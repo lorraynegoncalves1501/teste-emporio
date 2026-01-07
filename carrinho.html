@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>Carrinho</title>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="carrinho.css"> <!-- CSS exclusivo do carrinho -->
+</head>
+
+<body onload="carregarCarrinho()">
+
+<header class="banner">
+    <img src="imagens/logomarca.png" alt="Logo da Marca">
+</header>
+
+<h2 class="titulo-carrinho">🛒 Seu Carrinho</h2>
+
+<div class="carrinho-container">
+    <div id="lista-carrinho" class="lista-carrinho"></div>
+    <p id="total" class="total-carrinho">Total: R$ 0,00</p>
+
+    <div class="pagamento-container">
+        <select id="pagamento" class="pagamento-select">
+            <option value="">Forma de pagamento</option>
+            <option value="Pix">Pix</option>
+            <option value="Dinheiro">Dinheiro</option>
+            <option value="Cartão">Cartão</option>
+        </select>
+    </div>
+
+    <button class="btn-finalizar" onclick="enviarWhatsApp()">Finalizar Pedido no WhatsApp</button>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

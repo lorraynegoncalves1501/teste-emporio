@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>Hidratantes</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <body data-tipo="hidratantes">
+<nav class="menu">
+  <a href="index.html">Início</a>
+  <a href="carrinho.html">Carrinho</a>
+</nav>
+
+<!-- Barra de pesquisa + filtro de gênero (mantém o mesmo do resto do site) -->
+<div class="pesquisa">
+  <input
+    type="text"
+    id="campoPesquisa"
+    placeholder="Pesquisar hidratante..."
+    onkeyup="filtrarHidratantes()"
+    >
+
+<div class="filtro-linhas">
+    <button onclick="filtrarLinha('todos')">Todos</button>
+    <button onclick="filtrarLinha('ekos')">Ekos</button>
+    <button onclick="filtrarLinha('tododia')">Tododia</button>
+</div>
+</div>
+
+<h1 id="tituloFiltro"><center>Hidratantes Natura</center></h1>
+
+<div class="produtos">
+
+  
+
+  <!-- ===== EKOS ===== -->
+  <div class="produto" data-linha="ekos">
+    <img src="imagens/hidratantemaracuja.jpg" width="200">
+    <h3>Hidratante Ekos Frescor Maracujá</h3>
+    <p><strong>400 ml</strong></p>
+    <p class="legenda">Hidratação fresca e cítrica.</p>
+    <p><strong>R$ 89,90</strong></p>
+    <button onclick="adicionarCarrinho('Hidratante Ekos Frescor Maracujá 400ml',89.90)">Comprar Agora</button>
+  </div>
+
+  <div class="produto" data-linha="ekos">
+    <img src= "imagens/hidratantecastanha.jpg"width="200">
+    <h3>Hidratante Ekos Frescor Castanha</h3>
+    <p><strong>400 ml</strong></p>
+    <p class="legenda">Nutritivo e suave para a pele.</p>
+    <p><strong>R$ 89,90</strong></p>
+    <button onclick="adicionarCarrinho('Hidratante Ekos Frescor Castanha 400ml',89.90)">Comprar Agora</button>
+  </div>
+
+  <div class="produto" data-linha="ekos">
+    <img src="imagens/hidratantepitanga.jpg" width="200">
+    <h3>Hidratante Ekos Frescor Pitanga</h3>
+    <p><strong>400 ml</strong></p>
+    <p class="legenda">Frutado e refrescante.</p>
+    <p><strong>R$ 89,90</strong></p>
+    <button onclick="adicionarCarrinho('Hidratante Ekos Frescor Pitanga 400ml',89.90)">Comprar Agora</button>
+  </div>
+
+  <div class="produto" data-linha="ekos">
+    <img src="imagens/hidratanteaçai.jpg" width="200">
+    <h3>Hidratante Ekos Frescor Açaí</h3>
+    <p><strong>400 ml</strong></p>
+    <p class="legenda">Com frescor tropical.</p>
+    <p><strong>R$ 89,90</strong></p>
+    <button onclick="adicionarCarrinho('Hidratante Ekos Frescor Açaí 200ml',89.90)">Comprar Agora</button>
+  </div>
+
+  <!-- ===== UNA ===== -->
+  <div class="produto" data-genero="feminino">
+    <img src="imagens/hidratanteuna.jpg" width="200">
+    <h3>Hidratante Una Feminino</h3>
+    <p><strong>200 ml</strong></p>
+    <p class="legenda">Textura hidratante com toque sofisticado.</p>
+    <p><strong>R$ 99,90</strong></p>
+    <button onclick="adicionarCarrinho('Hidratante Una Feminino 200ml',99.90)">Comprar Agora</button>
+  </div>
+
+  <div class="produto" data-genero="feminino">
+    <img src="imagens/hidratanteunaartisan.jpg" width="200">
+    <h3>Hidratante Una Artisan Feminino</h3>
+    <p><strong>200 ml</strong></p>
+    <p class="legenda">Hidratação intensa e elegante.</p>
+    <p><strong>R$ 134,90</strong></p>
+    <button onclick="adicionarCarrinho('Hidratante Una Artisan 200ml',134.90)">Comprar Agora</button>
+  </div>
+
+  <!-- ===== LUNA ===== -->
+  <div class="produto" data-genero="feminino">
+    <img src="imagens/hidratanteluna.jpg" width="200">
+    <h3>Hidratante Luna Feminino</h3>
+    <p><strong>300 ml</strong></p>
+    <p class="legenda">Perfume suave e refrescante.</p>
+    <p><strong>R$ 95,90</strong></p>
+    <button onclick="adicionarCarrinho('Hidratante Luna Feminino 300ml',95.90)">Comprar Agora</button>
+  </div>
+
+  <div class="produto" data-genero="feminino">
+    <img src="imagens/hidratantelunadivina.jpg" width="200">
+    <h3>Hidratante Luna Divina</h3>
+    <p><strong>150 ml</strong></p>
+    <p class="legenda">Hidratação delicada e marcante.</p>
+    <p><strong>R$ 65,90</strong></p>
+    <button onclick="adicionarCarrinho('Hidratante Luna Divina 150ml',65.90)">Comprar Agora</button>
+  </div>
+
+  <!-- ===== ESSENCIAL ===== -->
+  <div class="produto" data-genero="feminino">
+    <img src="imagens/hidratanteessencial.jpg" width="200">
+    <h3>Hidratante Essencial Feminino</h3>
+    <p><strong>200 g</strong></p>
+    <p class="legenda">Toque suave e perfume marcante.</p>
+    <p><strong>R$ 134,90</strong></p>
+    <button onclick="adicionarCarrinho('Hidratante Essencial Feminino 200g',134.90)">Comprar Agora</button>
+  </div>
+
+  <div class="produto" data-genero="masculino">
+    <img src="imagens/hidratanteessencialsupreme.jpg" width="200">
+    <h3>Hidratante Essencial Supreme Feminino</h3>
+    <p><strong>200 g</strong></p>
+    <p class="legenda">Hidratação leve e marcante.</p>
+    <p><strong>R$ 134,90</strong></p>
+    <button onclick="adicionarCarrinho('Hidratante Essencial Único Masculino 200g',134.90)">Comprar Agora</button>
+  </div>
+
+<div class="produtos-container">
+
+  <div class="produto" data-linha="tododia">
+    <img src="imagens/hidratanteamoraeflordepessego.jpg" width="200">
+    <h3>Hidratante Tododia Amora e Flor de Pêssego</h3>
+    <p><strong>400 ml</strong></p>
+    <p class="legenda">Hidratação nutritiva com fragrância envolvente.</p>
+    <p><strong>R$ 78,90</strong></p>
+    <button onclick="adicionarCarrinho('Hidratante Tododia Amora e Flor de Pêssego 400ml',78.90)">
+      Comprar Agora
+    </button>
+  </div>
+
+  <div class="produto" data-linha="tododia">
+    <img src="imagens/hidratantealgodão.jpg" width="200">
+    <h3>Hidratante Tododia Algodão</h3>
+    <p><strong>400 ml</strong></p>
+    <p class="legenda">Toque suave e cuidado diário para a pele.</p>
+    <p><strong>R$ 78,90</strong></p>
+    <button onclick="adicionarCarrinho('Hidratante Tododia Algodão 400ml',78.90)">
+      Comprar Agora
+    </button>
+  </div>
+
+  <div class="produto" data-linha="tododia">
+    <img src="imagens/hidratanteamoravermelhaejabuticaba.jpg" width="200">
+    <h3>Hidratante Tododia Amora vermelha e Jabuticaba</h3>
+    <p><strong>400 ml</strong></p>
+    <p class="legenda">Hidratação com fragrância frutal vibrante.</p>
+    <p><strong>R$ 78,90</strong></p>
+    <button onclick="adicionarCarrinho('Hidratante Tododia Amora vermelha e Jabuticaba 400ml',78.90)">
+      Comprar Agora
+    </button>
+  </div>
+
+  <div class="produto" data-linha="tododia">
+    <img src="imagens/hidratanteacerolaehibisco.jpg" width="200">
+    <h3>Hidratante Tododia Acerola e Hibisco</h3>
+    <p><strong>400 ml</strong></p>
+    <p class="legenda">Perfume floral moderno e hidratação intensa.</p>
+    <p><strong>R$ 78,90</strong></p>
+    <button onclick="adicionarCarrinho('Hidratante Tododia Acerola e Hibisco 400ml',78.90)">
+      Comprar Agora
+    </button>
+  </div>
+
+  <div class="produto" data-linha="tododia">
+    <img src="imagens/hidratantemacadamia.jpg" width="200">
+    <h3>Hidratante Tododia Macadâmia</h3>
+    <p><strong>400 ml</strong></p>
+    <p class="legenda">Sensação calmante e refrescante.</p>
+    <p><strong>R$ 78,90</strong></p>
+    <button onclick="adicionarCarrinho('Hidratante Tododia Macadâmia 400ml',78.90)">
+      Comprar Agora
+    </button>
+  </div>
+
+  <div class="produto" data-linha="tododia">
+    <img src="imagens/hidratantenozpecaecacau.jpg" width="200">
+    <h3>Hidratante Tododia Noz Pecã e Cacau</h3>
+    <p><strong>400 ml</strong></p>
+    <p class="legenda">Nutrição intensa com toque aveludado.</p>
+    <p><strong>R$ 78,90</strong></p>
+    <button onclick="adicionarCarrinho('Hidratante Tododia Noz Pecã e Cacau 400ml',78.90)">
+      Comprar Agora
+    </button>
+  </div>
+
+  <div class="produto" data-linha="tododia">
+    <img src="imagens/hidratantecapimlimaoehortela.jpg" width="200">
+    <h3>Hidratante Tododia Capim limão e Hortelã </h3>
+    <p><strong>400 ml</strong></p>
+    <p class="legenda">Hidratação prolongada com fragrância aconchegante.</p>
+    <p><strong>R$ 78,90</strong></p>
+    <button onclick="adicionarCarrinho('Hidratante Tododia Capim limão e Hortelã  400ml',78.90)">
+      Comprar Agora
+    </button>
+  </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

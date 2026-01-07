@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>Perfumes</title>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="filtro.css">  <!-- novo CSS para filtro -->
+</head>
+
+<body>
+    <body data-tipo="perfumes">
+<nav class="menu">
+<a href="index.html">Início</a>
+<a href="carrinho.html">Carrinho</a>
+</nav>
+
+<!-- Barra de pesquisa + filtro de gênero -->
+<div class="pesquisa">
+  <input
+    type="text"
+    id="campoPesquisa"
+    placeholder="Pesquisar perfume..."
+    onkeyup="filtrarPerfumes()"
+  >
+  <div style="margin-top:10px;">
+    <button onclick="filtrarGenero('todos', this)">Todos</button>
+    <button onclick="filtrarGenero('feminino', this)">Feminino</button>
+    <button onclick="filtrarGenero('masculino', this)">Masculino</button>
+  </div>
+</div>
+
+<h1 id="tituloFiltro"><center>Perfumes Natura</center></h1>
+
+<div class="produtos">
+
+<!-- ===== HUMOR ===== -->
+
+<div class="produto" data-genero="feminino">
+  <img src="imagens/meuprimeirohumor.jpg" width="200">
+  <h3> Desodorante colônia Meu Primeiro Humor</h3>
+  <p><strong>75 ml</strong></p>
+  <p class="legenda">Floral frutado alegre, doce na medida certa, leve e jovem.</p>
+  <p><strong>R$ 106,90</strong></p>
+  <button onclick="adicionarCarrinho('Meu Primeiro Humor 75ml',106.90)">Comprar Agora</button>
+</div>
+
+<div class="produto" data-genero="feminino">
+  <img src="imagens/humorproprio.jpg" width="200">
+  <h3>Desodorante colônia humor próprio feminino</h3>
+  <p><strong>75 ml</strong></p>
+  <p class="legenda"> Adocicado moderado. </p>
+  <p><strong>R$ 164,90</strong></p>
+  <button onclick="adicionarCarrinho('humor próprio feminino 75ml',164.90)">Comprar Agora</button>
+</div>
+
+<div class="produto" data-genero="feminino">
+  <img src="imagens/quimicadehumor.jpg" width="200">
+  <h3>Desodorante colônia química de humor feminino</h3>
+  <p><strong>75 ml</strong></p>
+  <p class="legenda">Floral adocicado com toque ousado e moderno.</p>
+  <p><strong>R$ 164,90</strong></p>
+  <button onclick="adicionarCarrinho('química de humor feminino 75ml',164.90)">Comprar Agora</button>
+</div>
+
+<!-- ===== EKOS ===== -->
+
+<div class="produto" data-genero="feminino">
+  <img src="imagens/ekosmaracuja.jpg" width="200">
+  <h3>Ekos Frescor Maracujá</h3>
+  <p><strong>100 ml</strong></p>
+  <p class="legenda">Fresco e natural, com toque cítrico relaxante.</p>
+  <p><strong>R$ 129,90</strong></p>
+  <button onclick="adicionarCarrinho('Ekos Frescor Maracujá 100ml',129.90)">Comprar Agora</button>
+</div>
+
+<div class="produto" data-genero="feminino">
+  <img src="imagens/ekoscastanha.jpg" width="200">
+  <h3>Ekos Frescor Castanha</h3>
+  <p><strong>150 ml</strong></p>
+  <p class="legenda">Cremoso e suave, com sensação de conforto.</p>
+  <p><strong>R$ 129,90</strong></p>
+  <button onclick="adicionarCarrinho('Ekos Frescor Castanha 150ml',129.90)">Comprar Agora</button>
+</div>
+
+<div class="produto" data-genero="feminino">
+  <img src="imagens/ekospitanga.jpg" width="200">
+  <h3>Ekos Frescor Pitanga</h3>
+  <p><strong>150 ml</strong></p>
+  <p class="legenda">Frutado vibrante e refrescante.</p>
+  <p><strong>R$ 129,90</strong></p>
+  <button onclick="adicionarCarrinho('Ekos Frescor Pitanga 150ml',129.90)">Comprar Agora</button>
+</div>
+
+<div class="produto" data-genero="feminino">
+  <img src="imagens/ekosaçai.jpg" width="200">
+  <h3>Ekos Frescor Açaí</h3>
+  <p><strong>150 ml</strong></p>
+  <p class="legenda">Frutado adocicado com frescor tropical.</p>
+  <p><strong>R$ 129,90</strong></p>
+  <button onclick="adicionarCarrinho('Ekos Frescor Açaí 150ml',129.90)">Comprar Agora</button>
+</div>
+
+<!-- ===== UNA ===== -->
+
+<div class="produto" data-genero="feminino">
+  <img src="imagens/una.jpg" width="200">
+  <h3>Una Feminino</h3>
+  <p><strong>75 ml</strong></p>
+  <p class="legenda">Floral sofisticado e intenso.</p>
+  <p><strong>R$ 319,90</strong></p>
+  <button onclick="adicionarCarrinho('Una Feminino 75ml',319.90)">Comprar Agora</button>
+</div>
+
+<div class="produto" data-genero="feminino">
+  <img src="imagens/unaartisan.jpg" width="200">
+  <h3>Una Artisan</h3>
+  <p><strong>75 ml</strong></p>
+  <p class="legenda">Floral amadeirado refinado.</p>
+  <p><strong>R$ 319,90</strong></p>
+  <button onclick="adicionarCarrinho('Una Artisan 75ml',319.90)">Comprar Agora</button>
+</div>
+
+<div class="produto" data-genero="feminino">
+  <img src="imagens/perfumeunablush.jpg" width="200">
+  <h3>Una Blush</h3>
+  <p><strong>75 ml</strong></p>
+  <p class="legenda">Floral amadeirado refinado.</p>
+  <p><strong>R$ 319,90</strong></p>
+  <button onclick="adicionarCarrinho('Una Blush 75ml',319.90)">Comprar Agora</button>
+</div>
+
+<!-- ===== LUNA ===== -->
+
+<div class="produto" data-genero="feminino">
+  <img src="imagens/luna.jpg" width="200">
+  <h3>Luna Feminino</h3>
+  <p><strong>75 ml</strong></p>
+  <p class="legenda">Chipre moderno e sensual.</p>
+  <p><strong>R$ 185,90</strong></p>
+  <button onclick="adicionarCarrinho('Luna Feminino 75ml',185.90)">Comprar Agora</button>
+</div>
+
+<div class="produto" data-genero="feminino">
+  <img src="imagens/lunadivina.jpg" width="200">
+  <h3>Luna Divina</h3>
+  <p><strong>100 ml</strong></p>
+  <p class="legenda">Floral intenso e elegante.</p>
+  <p><strong>R$ 185,90</strong></p>
+  <button onclick="adicionarCarrinho('Luna Divina 75ml',185.90)">Comprar Agora</button>
+</div>
+
+<div class="produto" data-genero="feminino">
+  <img src="imagens/lunaradiante.jpg" width="200">
+  <h3>Luna Radiante</h3>
+  <p><strong>100 ml</strong></p>
+  <p class="legenda">Floral luminoso e vibrante.</p>
+  <p><strong>R$ 185,90</strong></p>
+  <button onclick="adicionarCarrinho('Luna Radiante 75ml',185.90)">Comprar Agora</button>
+</div>
+
+<!-- ===== REVELAR / AURA ===== -->
+
+<div class="produto" data-genero="feminino">
+  <img src="imagens/revelar.jpg" width="200">
+  <h3>Revelar</h3>
+  <p><strong>100 ml</strong></p>
+  <p class="legenda">Floral romântico e delicado.</p>
+  <p><strong>R$ 199,90</strong></p>
+  <button onclick="adicionarCarrinho('Revelar 100ml',199.90)">Comprar Agora</button>
+</div>
+
+<div class="produto" data-genero="feminino">
+  <img src="imagens/auraalba.jpg" width="200">
+  <h3>Aura Alba</h3>
+  <p><strong>100 ml</strong></p>
+  <p class="legenda">Floral branco sofisticado.</p>
+  <p><strong>R$ 329,90</strong></p>
+  <button onclick="adicionarCarrinho('Aura Alba 100ml',329.90)">Comprar Agora</button>
+</div>
+
+<!-- ===== ESSENCIAL (7 VERSÕES) ===== -->
+
+<div class="produto" data-genero="feminino">
+  <img src="imagens/essencial.jpg" width="200">
+  <h3>Essencial Feminino</h3>
+  <p><strong>100 ml</strong></p>
+  <p class="legenda">Floral amadeirado intenso.</p>
+  <p><strong>R$ 279,90</strong></p>
+  <button onclick="adicionarCarrinho('Essencial Feminino 100ml',279.90)">Comprar Agora</button>
+</div>
+
+<div class="produto" data-genero="feminino">
+  <img src="imagens/essencialsentir.jpg" width="200">
+  <h3>Essencial Único</h3>
+  <p><strong>90 ml</strong></p>
+  <p class="legenda">Floral intenso e moderno, com personalidade marcante e exclusiva.</p>
+  <p><strong>R$ 322,90</strong></p>
+  <button onclick="adicionarCarrinho('Essencial Único 90ml',322.90)">Comprar Agora</button>
+</div>
+
+<div class="produto" data-genero="feminino">
+  <img src="imagens/essencialunico.jpg" width="200">
+  <h3>Essencial Sentir</h3>
+  <p><strong>100 ml</strong></p>
+  <p class="legenda">Sinta a leveza e a sofisticação com esta fragrância sensual e envolvente.</p>
+  <p><strong>R$ 279,90</strong></p>
+  <button onclick="adicionarCarrinho('Essencial Sentir 100ml',279.90)">Comprar Agora</button>
+</div>
+
+<div class="produto" data-genero="feminino">
+  <img src="imagens/essencialato.jpg" width="200">
+  <h3>Essencial Ato</h3>
+  <p><strong>100 ml</strong></p>
+  <p class="legenda">Potente e ousado.</p>
+  <p><strong>R$ 279,90</strong></p>
+  <button onclick="adicionarCarrinho('Essencial Ato 100ml',279.90)">Comprar Agora</button>
+</div>
+
+<div class="produto" data-genero="feminino">
+  <img src="imagens/essencialexclusivo.jpg" width="200">
+  <h3>Essencial Exclusivo</h3>
+  <p><strong>100 ml</strong></p>
+  <p class="legenda">Luxuoso e sofisticado.</p>
+  <p><strong>R$ 279,90</strong></p>
+  <button onclick="adicionarCarrinho('Essencial Exclusivo 100ml',279.90)">Comprar Agora</button>
+</div>
+
+<div class="produto" data-genero="feminino">
+  <img src="imagens/essencialatrai.jpg" width="200">
+  <h3>Essencial Atrai</h3>
+  <p><strong>100 ml</strong></p>
+  <p class="legenda">Adocicado e sensual.</p>
+  <p><strong>R$ 279,90</strong></p>
+  <button onclick="adicionarCarrinho('Essencial Atrai 100ml',279.90)">Comprar Agora</button>
+</div>
+
+<div class="produto" data-genero="feminino">
+  <img src="imagens/essencialsupreme.jpg" width="200">
+  <h3>Essencial Supreme</h3>
+  <p><strong>100 ml</strong></p>
+  <p class="legenda">Alta fixação e poder.</p>
+  <p><strong>R$ 299,90</strong></p>
+  <button onclick="adicionarCarrinho('Essencial Supreme 100ml',299.90)">Comprar Agora</button>
+</div>
+
+
+<div class="produto" data-genero="feminino">
+  <img src="imagens/biografia.jpg" width="200">
+  <h3>Biografia Feminino</h3>
+  <p><strong>100 ml</strong></p>
+  <p>Floral moderado</p>
+  <p class="legenda">
+    Uma fragrância clássica e marcante que traduz a força e a delicadeza feminina.</p>
+  <p><strong>R$ 209,90</strong></p>
+  <button onclick="adicionarCarrinho('Biografia Feminino 100ml', 209.90)">
+    Comprar Agora
+  </button>
+</div>
+
+<div class="produto" data-genero="feminino">
+  <img src="imagens/biografiaassinatura.jpg" width="200">
+  <h3>Biografia Assinatura Feminino</h3>
+  <p><strong>100 ml</strong></p>
+  <p>Floral adocicado</p>
+  <p class="legenda">
+    Uma fragrância sofisticada e envolvente, com notas florais adocicadas que revelam
+    feminilidade, elegância e personalidade.
+  </p>
+  <p><strong>R$ 209,90</strong></p>
+  <button onclick="adicionarCarrinho('Biografia Assinatura Feminino 100ml', 209.90)">
+    Comprar Agora
+  </button>
+</div>
+
+<!-- ===================== Linha Kaiak ===================== -->
+<div class="produto" data-genero="masculino">
+  <img src="imagens/kaiak.jpg" width="200">
+  <h3>Kaiak Tradicional</h3>
+  <p><strong>100 ml</strong></p>
+  <p class="legenda">Clássico, fresco e aquático.</p>
+  <p><strong>R$ 189,90</strong></p>
+  <button onclick="adicionarCarrinho('Kaiak Tradicional 100ml',189.90)">Comprar Agora</button>
+</div>
+
+<div class="produto" data-genero="masculino">
+  <img src="imagens/kaiakoceano.jpg" width="200">
+  <h3>Kaiak Oceano</h3>
+  <p><strong>100 ml</strong></p>
+  <p class="legenda">Versão mais aquática e marítima.</p>
+  <p><strong>R$ 189,90</strong></p>
+  <button onclick="adicionarCarrinho('Kaiak Oceano 100ml',189.90)">Comprar Agora</button>
+</div>
+
+<div class="produto" data-genero="masculino">
+  <img src="imagens/kaiakurbe.jpg" width="200">
+  <h3>Kaiak Urbe</h3>
+  <p><strong>100 ml</strong></p>
+  <p class="legenda">Fresco e urbano.</p>
+  <p><strong>R$ 189,90</strong></p>
+  <button onclick="adicionarCarrinho('Kaiak Urbe 100ml',189.90)">Comprar Agora</button>
+</div>
+
+<div class="produto" data-genero="masculino">
+  <img src="imagens/kaiakaventura.jpg" width="200">
+  <h3>Kaiak Aventura</h3>
+  <p><strong>100 ml</strong></p>
+  <p class="legenda">Intenso e aventureiro.</p>
+  <p><strong>R$ 209,90</strong></p>
+  <button onclick="adicionarCarrinho('Kaiak Aventura 100ml',209.90)">Comprar Agora</button>
+</div>
+
+<div class="produto" data-genero="masculino">
+  <img src="imagens/kaiaksonar.jpg" width="200">
+  <h3> kaiak sonar</h3>
+  <p><strong>100 ml</strong></p>
+  <p class="legenda">Aromático aquático com tecnologia vibraScent e frescor azul para o dia a dia.</p>
+  <p><strong>R$ 189,90</strong></p>
+  <button onclick="adicionarCarrinho(' kaiak sonar 100ml',189.90)">Comprar Agora</button>
+</div>
+
+<!-- ===================== Linha Essencial ===================== -->
+<div class="produto" data-genero="masculino">
+  <img src="imagens/essencialunicomasc.jpg" width="200">
+  <h3>Essencial Único</h3>
+  <p><strong>90 ml</strong></p>
+  <p class="legenda">Intenso e marcante.</p>
+  <p><strong>R$ 322,90</strong></p>
+  <button onclick="adicionarCarrinho('Essencial Único 90ml',322.90)">Comprar Agora</button>
+</div>
+
+<div class="produto" data-genero="masculino">
+  <img src="imagens/essencialmasc.jpg" width="200">
+  <h3>Essencial</h3>
+  <p><strong>100 ml</strong></p>
+  <p class="legenda">Potente e sofisticado.</p>
+  <p><strong>R$ 279,90</strong></p>
+  <button onclick="adicionarCarrinho('Essencial Intenso 100ml',279.90)">Comprar Agora</button>
+</div>
+
+<div class="produto" data-genero="masculino">
+  <img src="imagens/essencialoudmasc.jpg" width="200">
+  <h3>Essencial Oud</h3>
+  <p><strong>100 ml</strong></p>
+  <p class="legenda">Fragrância premium, elegante e sofisticada.</p>
+  <p><strong>R$ 279,90</strong></p>
+  <button onclick="adicionarCarrinho('Essencial Oud 100ml',279.90)">Comprar Agora</button>
+</div>
+
+<div class="produto" data-genero="masculino">
+  <img src="imagens/essencialexclusivomasc.jpg" width="200">
+  <h3>Essencial Exclusivo</h3>
+  <p><strong>100 ml</strong></p>
+  <p class="legenda">Versão sofisticada e intensa da linha.</p>
+  <p><strong>R$ 279,90</strong></p>
+  <button onclick="adicionarCarrinho('Essencial Exclusivo 100ml',279.90)">Comprar Agora</button>
+</div>
+
+<div class="produto" data-genero="masculino">
+  <img src="imagens/essencialsentirmasc.jpg" width="200">
+  <h3>Essencial Sentir</h3>
+  <p><strong>100 ml</strong></p>
+  <p class="legenda">Fragrância amadeirada aromática sofisticada e marcante .</p>
+  <p><strong>R$ 279,90</strong></p>
+  <button onclick="adicionarCarrinho('Essencial Sentir 100ml',279.90)">Comprar Agora</button>
+</div>
+
+<!-- ===================== Linha Natura Homem ===================== -->
+<div class="produto" data-genero="masculino">
+  <img src="imagens/naturahomemcoragio.jpg" width="200">
+  <h3>Natura Homem Corágio</h3>
+  <p><strong>100 ml</strong></p>
+  <p class="legenda">Masculino, marcante e envolvente.</p>
+  <p><strong>R$ 319,90</strong></p>
+  <button onclick="adicionarCarrinho('Natura Homem Coragio 100ml',319.90)">Comprar Agora</button>
+</div>
+
+<div class="produto" data-genero="masculino">
+  <img src="imagens/naturahomemsagazmasc.jpg" width="200">
+  <h3>Natura Homem Sagaz</h3>
+  <p><strong>100 ml</strong></p>
+  <p class="legenda">Aromático, moderno e elegante.</p>
+  <p><strong>R$ 239,90</strong></p>
+  <button onclick="adicionarCarrinho('Natura Homem Sagaz 100ml',239.90)">Comprar Agora</button>
+</div>
+
+<div class="produto" data-genero="masculino">
+  <img src="imagens/naturahomemtattomasc.jpg" width="200">
+  <h3>Natura Homem Tato</h3>
+  <p><strong>100 ml</strong></p>
+  <p class="legenda">Fresco e sofisticado.</p>
+  <p><strong>R$ 239,90</strong></p>
+  <button onclick="adicionarCarrinho('Natura Homem Tato 100ml',239.90)">Comprar Agora</button>
+</div>
+
+<div class="produto" data-genero="masculino">
+  <img src="imagens/naturahomemessencemasc.jpg" width="200">
+  <h3>Natura Homem Essense</h3>
+  <p><strong>100 ml</strong></p>
+  <p class="legenda">Moderno e envolvente.</p>
+  <p><strong>R$ 239,90</strong></p>
+  <button onclick="adicionarCarrinho('Natura Homem Essense 100ml',239.90)">Comprar Agora</button>
+</div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
+
+

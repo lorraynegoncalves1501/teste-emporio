@@ -1,0 +1,292 @@
+body {
+    font-family: Arial;
+    margin: 0;
+    padding: 10px;
+    background-color: #fff; /* fundo branco padrão */
+}
+
+/* ===== BANNER ===== */
+.banner {
+    background: #FFE4E1;
+    text-align: center;
+    padding: 30px;
+}
+
+.banner img {
+    width: 450px;
+    height: 250px;
+    max-width: 100%;
+}
+
+.banner h1 {
+    color: black;
+}
+
+/* ===== MENU ===== */
+.menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    padding: 15px 0;
+    background-color: #fff;
+    flex-wrap: wrap;
+}
+
+.menu a {
+    margin-right: 60px;
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    padding: 8px 12px;
+    border-radius: 6px;
+}
+
+.menu a:hover {
+    background-color: #f5c6d6;
+}
+
+/* ===== PRODUTOS ===== */
+.produto {
+    border: 1px solid #ccc;
+    width: 220px;
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+    background: #fff;
+}
+
+.produto img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+/* ===== BOTÃO ADICIONAR AO CARRINHO ===== */
+.produto button {
+    margin-top: 5px;
+    background-color: #fff; /* botão branco */
+    color: #e91e63;
+    border: 2px solid #e91e63;
+    padding: 8px 12px;
+    cursor: pointer;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.produto button:hover {
+    background-color: #e91e63;
+    color: #fff;
+}
+
+/* ===== LEGENDA ===== */
+.legenda {
+    font-size: 14px;
+    color: #555;
+    margin: 6px 0;
+}
+
+/* ===== BARRA DE PESQUISA ===== */
+.pesquisa {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 20px 0;
+    gap: 10px;
+}
+
+.pesquisa input {
+    width: 300px;
+    max-width: 90%;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+}
+
+/* Estilo dos botões de filtro */
+.pesquisa button {
+    background-color: #fff; /* branco */
+    color: #e91e63;
+    border: 2px solid #e91e63;
+    border-radius: 8px;
+    padding: 8px 12px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.pesquisa button.active,
+.pesquisa button:hover {
+    background-color: #e91e63;
+    color: #fff;
+}
+
+/* ===== CONTAINER DOS PRODUTOS ===== */
+.produtos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+/* ===== LOGIN ===== */
+.login-body {
+    background: #FFE4E1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.login-box {
+    background: white;
+    padding: 60px;
+    width: 300px;
+    border-radius: 15px;
+    text-align: center;
+}
+
+.login-logo {
+    width: 250px;
+    max-width: 100%;
+    margin-bottom: 18px;
+}
+
+.login-box input {
+    width: 100%;
+    padding: 13px;
+    margin: 8px 0;
+}
+
+/* ===== CARRINHO ===== */
+.titulo-carrinho {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 28px;
+    color: #e91e63;
+}
+
+.lista-carrinho {
+    max-width: 700px;
+    margin: 20px auto;
+}
+
+.item-carrinho {
+    display: flex;
+    justify-content: space-between;
+    background: #fff;
+    padding: 12px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    font-size: 16px;
+    color: #333;
+}
+
+/* Botão remover do carrinho */
+.item-carrinho button {
+    background-color: #fff;
+    color: #e91e63;
+    border: 2px solid #e91e63;
+    border-radius: 8px;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.item-carrinho button:hover {
+    background-color: #e91e63;
+    color: #fff;
+}
+
+.total-carrinho {
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+.btn-finalizar {
+    display: block;
+    margin: 20px auto;
+    padding: 14px 20px;
+    font-size: 16px;
+    background: #e91e63;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-finalizar:hover {
+    opacity: 0.9;
+}
+.forma-pagamento {
+    width: 100%;
+    max-width: 400px;
+    margin: 40px auto;   /* centraliza de verdade */
+    padding: 20px;
+    text-align: center;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    background-color: #fff;
+    clear: both;         /* impede herdar alinhamento */
+}
+
+/* ===== RESPONSIVO ===== */
+@media (max-width: 768px) {
+    .produtos {
+        gap: 15px;
+    }
+    .produto {
+        width: 45%;
+    }
+}
+
+@media (max-width: 480px) {
+    .produto {
+        width: 90%;
+    }
+}
+.produtos-container {
+    display: flex;
+    flex-wrap: wrap;        /* permite quebrar linha se faltar espaço */
+    justify-content: center;
+    gap: 25px;
+}
+
+.produto {
+    width: 230px;           /* largura fixa para alinhar lado a lado */
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    padding: 15px;
+    text-align: center;
+    background: #fff;
+}
+.carrinho-container {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Container da forma de pagamento */
+.pagamento-container {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+/* Select da forma de pagamento */
+.pagamento-select {
+    width: 100%;
+    max-width: 300px;
+    padding: 12px;
+    font-size: 16px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    text-align: center;
+}
