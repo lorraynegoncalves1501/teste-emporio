@@ -12,7 +12,6 @@ function login() {
     const cliente = { nome, celular, endereco };
     localStorage.setItem("cliente", JSON.stringify(cliente));
 
-    alert(`✅ Bem-vindo(a), ${nome}!`);
     location.href = "index.html";
 }
 
@@ -27,7 +26,6 @@ function adicionarCarrinho(nome, preco) {
     else carrinho.push({ nome, preco, qtd: 1 });
 
     salvarCarrinho();
-    alert(`Produto "${nome}" adicionado ao carrinho!`);
 }
 
 // Remover produto do carrinho
@@ -187,4 +185,5 @@ function filtrarLinha(linha) {
         }
     });
 }
+
 
